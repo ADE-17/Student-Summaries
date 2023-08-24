@@ -18,7 +18,7 @@ data = pd.read_csv('/home/woody/iwso/iwso092h/student_summaries/commonlit-evalua
 # tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 tokenizer = ElectraTokenizer.from_pretrained('google/electra-base-discriminator')
 
-max_seq_length = 600
+max_seq_length = 512
 
 def tokenize_text(text):
     return tokenizer.encode(text, add_special_tokens=True, max_length=max_seq_length, padding='max_length', truncation=True)
